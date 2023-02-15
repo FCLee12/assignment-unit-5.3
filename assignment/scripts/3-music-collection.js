@@ -19,10 +19,22 @@ function showCollection( array ) {
     }
 }
 
-//*****Testing Zone*****
+function findByArtist( artist, albumCollection ) {
+    let results = [];
+    for( let item of albumCollection ) {
+        if ( item.artist === artist ) {
+            results.push( item );
+        } // else {
+        //     console.log( 'Sorry, that album does not exist in this collection' );
+        // }
+    }
+    return results;
+}
 
-// *****addToCollection Testing*****
-console.log( '*****addToCollection Testing*****' );
+//***** Testing Zone *****
+
+//***** addToCollection Testing *****
+console.log( '***** addToCollection Testing *****' );
 
 console.log( addToCollection( 'Album', 'Musician', '2000' ) );
 console.log( addToCollection( 'Album1', 'Musician1', '2001' ) );
@@ -33,7 +45,13 @@ console.log( addToCollection( 'Album5', 'Musician5', '2005' ) );
 
 console.log( collection );
 
-// *****showCollection Testing*****
-console.log( '*****showCollection Testing*****' );
+//***** showCollection Testing *****
+console.log( '***** showCollection Testing *****' );
 
 showCollection( collection );
+
+//***** findByArtist Testing *****
+console.log( '***** showCollection Testing *****' );
+
+console.log( findByArtist( 'Musician', collection ) );
+console.log( findByArtist( 'ABCDE', collection ) );
