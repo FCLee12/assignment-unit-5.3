@@ -42,6 +42,10 @@ console.log( addToCollection( 'Album2', 'Musician2', '2002' ) );
 console.log( addToCollection( 'Album3', 'Musician3', '2003' ) );
 console.log( addToCollection( 'Album4', 'Musician4', '2004' ) );
 console.log( addToCollection( 'Album5', 'Musician5', '2005' ) );
+//Added for expanded testing for findByArtist function
+console.log( addToCollection( 'Album123', 'Musician', '2010' ) );
+console.log( addToCollection( 'Album456', 'Musician', '2012' ) );
+
 
 console.log( collection );
 
@@ -53,5 +57,8 @@ showCollection( collection );
 //***** findByArtist Testing *****
 console.log( '***** showCollection Testing *****' );
 
+//Test for in collection
 console.log( findByArtist( 'Musician', collection ) );
+
+//Test for not in collection
 console.log( findByArtist( 'ABCDE', collection ) );
