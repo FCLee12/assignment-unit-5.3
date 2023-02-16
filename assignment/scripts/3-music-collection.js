@@ -31,8 +31,6 @@ function findByArtist( artist, albumCollection ) {
     return results;
 }
 
-//Stretch Goals
-
 
 //***** Testing Zone *****
 
